@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head.ejs") %>
+        <link href="/css/styles_gamesDetails.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+        <main>
+            <section class="container">
+
+                <div class="left">
+                    <h2 class="soft-title">Nuestro software</h2>
+                    <div class="left-container">
+                        <p class="soft-descr">Batocera.linux es una distribución de juegos retro de código abierto y
+                            completamente gratuita que se puede copiar a una memoria USB o una tarjeta SD con el
+                            objetivo de
+                            convertir cualquier computadora / nano computadora en una consola de juegos durante un juego
+                            o de forma definitiva.
+                        </p>
+                        <div class="opciones-container">
+                            <h3>Busca por consola o por genero</h3>
+                            <div class="opciones-wrapper">
+                                <button class="consolas-bot boton">Consolas</button>
+                                <button class="generos-bot boton">Generos</button>
+                            </div>
+                            <div class="consolas-opciones">
+                                <% for(let consol of consols) { %>
+
+                                    <button>
+                                        <% if(locals.userLogged && locals.userLogged.admin) { %>
+                                            <a href="/consols/<%= consol.id %>/edit ">
+                                                <% } %>
+                                                    <img src="/images/consolas/<%= consol.consol_image %>"
+                                                        alt="Logo <%= consol.name  %> ">
+                                                    <div class="img-div">
+                                                        <%= consol.name %>
+                                                    </div>
+
+                                            </a>
+
+                                    </button>
+
+                                    <% } %>
+                            </div>
+                            <div class="generos-opciones">
+                                <button>Accion</button>
+                                <button>Aventura</button>
+                                <button>Deportes</button>
+                                <button>Shooters</button>
+                                <button>Carreras</button>
+                                <button>Puzzle</button>
+                                <button>RPG</button>
+                                <button>Indie</button>
+                            </div>
+                        </div>
+                    </div>
+                    <% if(locals.userLogged && locals.userLogged.admin) { %>
+                        <button class="boton create"><a href="/consols/consolsCreation" alt="">Crear
+                                Consola</a></button>
+                        <% } %>
+                </div>
+
+                <div class="right">
+                    <div class="barra">
+                        <input type="search" id="site-search" name="q" aria-label="Search through site content"
+                            placeholder="Encontra tu juego favorito y muchos mas" class="barra-buscadora">
+                    </div>
+                    <div class="img-container">
+                        <img src="\images\old_games.jpg" alt="image-games" width="100%">
+                    </div>
+                    <% if(locals.userLogged && locals.userLogged.admin) { %>
+                        <button class="boton create"><a href="/games/gamesCreation" alt="">Crear Juego</a></button>
+                        <% } %>
+
+            </section>
+
+            <div class="div-but">
+                <button class="consolas boton" id="consol-bot"><a href="/products">Mira nuestras
+                        consolas</a></button>
+            </div>
+
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

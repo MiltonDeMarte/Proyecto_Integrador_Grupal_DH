@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include("../partials/head.ejs") %>
+        <link href="/css/styles_login.css" rel="stylesheet" />
+
+<body>
+    <%- include("../partials/header.ejs") %>
+
+        <main>
+            <section class="bg-image">
+                <section class="login-display">
+                    <section class="blanc-space"></section>
+                    <section class="user-login">
+                        <section class="box-login">
+                            <h2 class="headlines margin-bottom-20">Hola <%=locals.userLogged.user_name%>
+                            </h2>
+                            <div class = "profile_photo_container">
+                                <img src="/images/users/avatar/<%=locals.userLogged.user_image%>" class="profile_photo"
+                                alt="User Photo" />
+                            </div>
+                            <div class="margin-vertical-20">
+                                    <div>
+                                        <a href="/user/<%= locals.userLogged.id %>/edit">
+                                        <button type="submit" class="boton">Editar</button></a>
+                                    </div>
+                            </div>
+                            <div>
+                                <a href="/user/logout/"><button class="boton">Cerrar Sesión</button></a>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

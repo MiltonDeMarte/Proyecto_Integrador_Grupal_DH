@@ -1,0 +1,65 @@
+<footer>
+  <section class="footer-section">
+    <section class="footer-divbar">
+      <div class="contenedor-footer-1">
+        <h3 class="subs">Consolas</h3>
+        <div>
+          <ul>
+            <% for(let product of products) { %>
+
+              <li><a href="/products/details/<%= product.id %> ">
+                  <%= product.name %>
+                </a></li>
+
+              <% } %>
+
+          </ul>
+        </div>
+      </div>
+      <div class="contenedor-footer-2">
+        <h3 class="subs">Catalogo Juegos</h3>
+        <div>
+          <ul>
+            <li><a href="">PS1</a></li>
+            <li><a href="">Sega</a></li>
+            <li><a href="">Nintendo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contenedor-footer-3">
+        <h3 class="subs">Trailers</h3>
+        <div>
+          <ul>
+            <li><a href="">PS1</a></li>
+            <li><a href="">Sega</a></li>
+            <li><a href="">Nintendo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contenedor-footer-4">
+        <h3 class="subs">Contacto</h3>
+        <div>
+          <ul>
+            <li><a href="">pirupigames@gmail.com</a></li>
+            <li><a href="">+5491150523437</a></li>
+            <li><a href="">Ciudad, Argentina</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="social-media">
+      <div>
+        <a href=""><i class="fab fa-whatsapp-square"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fab fa-facebook-square"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fab fa-twitter-square"></i></a>
+      </div>
+    </section>
+  </section>
+</footer>

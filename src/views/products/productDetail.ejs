@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../partials/head.ejs") %>
+    <link href="/css/styles_productDetail.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+
+    <main>
+      <section class="margin-vertical-20">
+        <h2 class="headlines centrado margin-10">Detalle Del Producto</h2>
+        <h2 class="subs margin-vertical-20 product-name-detail">
+          <%= product.name %>
+        </h2>
+        <div style="width: 100%">
+      </section>
+      <section class="contenedor-detail">
+        <section class="imagen-detail">
+          <div>
+            <img class="img-consol" src="/images/productos/<%= product.product_image %>" style="width:100%"
+              height="100%" />
+          </div>
+          <section class="descripcion-detail-1">
+            <div>
+              <p class="description">
+                <%= product.description%>
+              </p>
+            </div>
+            <div>
+              <p class="headlines centrado margin-vertical-20">Precio: $<%= product.price %>
+              </p>
+            </div>
+          </section>
+        </section>
+        <section class="descripcion-detail">
+          <section class="descripcion-detail-2">
+            <div>
+              <p class="description">
+                <%= product.description%>
+              </p>
+            </div>
+            <div>
+              <p class="headlines centrado margin-vertical-20">Precio: $<%= product.price %>
+              </p>
+            </div>
+          </section>
+          <section>
+            <form action="/">
+              <div class="margin-bottom-15 list">
+                <label for="colores" class="subs">Color</label>
+                <select name="productoColor" class="box">
+                  <% for(let color of productColors) { %>
+                    <option value="<%=color.colorHex%>">
+                      <%=color.nombre%>
+                    </option>
+                    <% } %>
+                </select>
+              </div>
+              <div class="margin-bottom-15 list">
+                <label for="memoria" class="subs">Memoria</label>
+                <select name="productoMemoria" class="box">
+                  <% for(let memory of productMemories) { %>
+                    <option value="<%=memory.memoria%>">
+                      <%=memory.memoria%> GB
+                    </option>
+                    <% } %>
+                </select>
+              </div>
+              <div class="buttons-send-erase margin-vertical-20">
+                <button class="buttons" type="submit">Agregar al Carrito</button>
+                <button class="buttons">Catalogo de Juegos</button>
+              </div>
+            </form>
+            <% if(locals.userLogged && locals.userLogged.admin) { %>
+              <a href="/products/<%= product.id %>/edit">
+                <button class="buttons">Editar</button></a>
+              <% } %>
+          </section>
+        </section>
+      </section>
+      <section class="margin-vertical-100-20 section-logos-consolas">
+        <% for (let consol of consols) { %>
+          <div class="wrapper-logos-consolas">
+            <img src="/images/logos_consolas/<%= consol.logo %>" class="w-100" alt="Trailers" />
+          </div>
+          <% } %>
+      </section>
+
+
+      <%- include("../partials/testimonial.ejs") %>
+
+    </main>
+</body>
+
+<%- include("../partials/footer.ejs") %>
+
+  </body>
+
+</html>
+
+
+</html>

@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "email": "admin@pirupi.com",
+    "user_name": "Admin",
+    "address": "Argentina",
+    "password": "$2a$10$GG54JDDq2r/GWUFe.uCfpu6eKjx9grZhgkHJmlhlnKjss1VP2a14q",
+    "confirmPassword": "Admin123",
+    "user_image": "1641858386894_avatar.jpg",
+    "admin": true
+  },
+  {
+    "id": 1641855317979,
+    "email": "miltondemarte1@gmail.com",
+    "user_name": "AtomicalHaze",
+    "address": "Roma 956, Garin, Buenos Aires",
+    "password": "$2a$10$ut8XR7xDX.A.ITMiWkKFRODfFNYxwyiXIXeln1ej1b7x1fPs1t2QS",
+    "confirmPassword": "Milton1234",
+    "user_image": "1641855317969_avatar.png",
+    "admin": true
+  },
+  {
+    "id": 1641856163128,
+    "email": "miltondemarte333@gmail.com",
+    "user_name": "AtomicalHaze",
+    "address": "Roma 956",
+    "password": "$2a$10$VC7HMr0GVxCo0cWOOm1s0.dD7VloAldlHpP2erSF8B77unOMeNZ6e",
+    "confirmPassword": "Alala123",
+    "user_image": "1641856163088_avatar.png"
+  }
+]

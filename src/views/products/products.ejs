@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+    <main>
+      <section class="margin-sections">
+        <h2 class="headlines centrado margin-10">Nuestras Consolas</h2>
+        <section class="section-productos">
+          <% for(let product of products) { %>
+            <div class="contenedor-producto">
+              <div>
+                <a href="./products/details/<%= product.id %>"><img src="/images/productos/<%= product.product_image %>"
+                    class="w-100" alt="Trailers" /></a>
+              </div>
+              <div>
+                <h2 class="subs centrado margin-10">
+                  <%= product.name %>
+                </h2>
+                <p class="centrado">
+                  <%= product.description %>
+                </p>
+              </div>
+              <div class="boton-cta">
+                <button class="boton">
+                  <a href="./products/details/<%= product.id %>">Ver Más</a>
+                </button>
+              </div>
+            </div>
+            <% } %>
+        </section>
+        <% if(locals.userLogged && locals.userLogged.admin) { %>
+          <div class="boton-cta">
+            <button class="boton">
+              <a href="/products/productAdd">Agregar consolas</a>
+            </button>
+          </div>
+          <% } %>
+      </section>
+
+      <section class="margin-vertical-20 section-logos-consolas">
+        <% for (let consol of consols) { %>
+          <div class="wrapper-logos-consolas">
+            <img src="/images/logos_consolas/<%= consol.logo %>" class="w-100" alt="Logo" />
+          </div>
+          <% } %>
+      </section>
+
+      <%- include("../partials/testimonial.ejs") %>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

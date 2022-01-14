@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../partials/head.ejs") %>
+    <link href="/css/styles_productCart.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+    <main>
+      <h3 class="headlines">Tu carrito</h3>
+      <section class="margin-sections">
+        <div class="carrito">
+          <div>
+            <label>Consola <small>(Descripcion)</small></label>
+            <input type="number" size="3" placeholder="$1000">
+          </div>
+          <div>
+            <label for="etiquetas">Adiocional <small>(Descripcion)</small></label>
+            <input type="number" size="3" placeholder="$1000">
+          </div>
+          <div>
+            <label>Seleccione el color</label> <br>
+            <select>
+              <option value="">- Selecione el color --</option>
+              <option value="2">Color1</option>
+              <option value="1">Color2</option>
+              <option value="3">Color3</option>
+          </div>
+          <input type="button" id="calcular" class="button" value="Calcular">
+        </div>
+        <div class="total">
+          <p>Resumen:</p>
+          <div id="lista-productos">
+
+          </div>
+          <p class=>Total:</p>
+          <div id="suma-total">
+
+          </div>
+          <input type="hidden" name="total_pedido" id="total_pedido">
+          <input type="hidden" name="total_descuento" id="total_descuento" value="total_descuento">
+          <input class="boton" type="submit" name="submit" class="button" value="Pagar">
+        </div>
+        </select>
+
+      </section>
+    </main>
+
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

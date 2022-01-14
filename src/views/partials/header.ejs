@@ -1,0 +1,29 @@
+<header>
+    <section class="header">
+        <div class="w-burger-menu">
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+                Menú
+            </button>
+        </div>
+        <div class="w-logo">
+            <a href="/"><img src="/images/Logo_solo_pirupi.jpg" alt="Aca va el logo de Pirupi" class="w-100 logo" /></a>
+        </div>
+        <div class="user-menu w-navbar">
+            <nav class="navbar1 headlines">
+                <ul>
+                    <li><a href="/products">Consolas</a></li>
+                    <li><a href="/games">Catalogo de Juegos</a></li>
+                    <li><a href="#">Trailers</a></li>
+                    <% if(locals.userLogged) {  %><li><a href="/user/profile"><%= userLogged.user_name %></a></li><% } %>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="user-ux w-user-ux">
+            <a href="/user/login"><i class="fas fa-user"></i></a>
+            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></i></a>
+
+        </div>
+    </section>
+</header>

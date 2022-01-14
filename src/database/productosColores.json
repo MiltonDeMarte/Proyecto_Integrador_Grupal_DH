@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Rojo",
+    "colorHex": "#a31915"
+  },
+  {
+    "nombre": "Arena",
+    "colorHex": "#cdb48c"
+  },
+  {
+    "nombre": "Gris",
+    "colorHex": "#706f6f"
+  },
+  {
+    "nombre": "Negro",
+    "colorHex": "#a31915"
+  }
+]

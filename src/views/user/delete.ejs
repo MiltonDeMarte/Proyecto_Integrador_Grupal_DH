@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../partials/head.ejs") %>
+    <link href="/css/styles_delete.css" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+
+    <main>
+       <section class="bg-image">
+                <section class="delete-display">
+                    <section class="blanc-space"></section>
+                    <section class="user-delete">
+                        <section class="box-delete">
+                            <h2 class="headlines margin-bottom-20">Estas seguro que quieres eliminar el usuario <%= locals.userLogged.user_name %>?????</h2>
+                            <div class = "deleted_photo_container">
+                                <img class="img-consol" src="/images/users/avatar/<%=locals.userLogged.user_image%>" style="width:100%" height="100%" />
+                            </div>
+                            <div class="margin-vertical-40-20">
+                                    <div>
+                                      <form action="/user/<%=locals.userLogged.id %>?_method=DELETE" method="POST">
+                                        <button class="boton" type="submit">Eliminar Usuario</button>
+                                      </form>
+                                    </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+    </main>
+</body>
+
+<%- include("../partials/footer.ejs") %>
+
+  </body>
+
+</html>
+
+
+</html>

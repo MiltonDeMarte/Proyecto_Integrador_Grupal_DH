@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include("../partials/head.ejs") %>
+        <link href="/css/styles_login.css" rel="stylesheet" />
+
+<body>
+    <%- include("../partials/header.ejs") %>
+
+        <main>
+            <section class = "bg-image">
+            <section class = "login-display">
+                <section class = "blanc-space"></section>
+            <section class="user-login">
+                <section class = "box-login">
+                    <h2 class = "headlines">Inicia Sesión</h2>
+                <form action="/user/login" method="POST">
+
+                    <div class="login margin-vertical-20">
+                        <div>
+                            <label for="email">Ingresa tu mail</label>
+                            <input type="text" id="email" name="email" placeholder="Ingresa tu correo">
+                            <%if(locals.errors && errors.email){ %>
+                                <div>
+                                    <p class = "rojopirupi"><%= errors.email.msg%></p>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div>
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+                        </div>
+
+                        <div>
+                            <ul>
+                            <input type="checkbox" id="remember_user" name="remember_user"> <label for="remember_user">Recordarme </label>Recordarme
+                        </ul>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="boton">Ingresar</button>
+                        </div>
+
+                    </div>
+                </form>
+                <div>
+                    <h3 class = "subs margin-vertical-20">¿No tenes usuario?</h5>
+                    <a href="/user/register"><button class="boton">Registrarse</button></a>
+                </div>
+            </section>
+            </section>
+        </section>
+    </section>
+
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

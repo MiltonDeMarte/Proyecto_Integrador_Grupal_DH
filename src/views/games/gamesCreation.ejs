@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs', {title : "Creando nuevo juego" }) %>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+    <main>
+      <section class="centrar">
+
+        <h2 class="headlines margin-bottom-20">Crear juego</h2>
+
+        <form action="/games" method="POST" enctype="multipart/form-data">
+
+          <div class="margin-bottom-15">
+            <label for="name">Nombre del juego*</label>
+            <input class="box" type="text" name="name" id="name" value=<%=locals.old && old.name ? old.name : " " %>>
+            <% if (locals.errors && errors.name) { %>
+              <div class="rojopirupi">
+                <%= errors.name.msg %>
+              </div>
+              <% } %>
+          </div>
+
+          <div class="margin-bottom-15">
+            <label for="description">Descripción del juego*</label>
+            <textarea class="box-textarea" type="text" name="description" id="description"><%=locals.old &&
+              old.description ? old.description : null %></textarea>
+            <% if (locals.errors && errors.description) { %>
+              <div class="rojopirupi">
+                <%= errors.description.msg %>
+              </div>
+              <% } %>
+          </div>
+
+          <div class="margin-bottom-15">
+            <label for="game_images">Cargar imagen*</label>
+            <div>
+              <input class="margin-bottom-20" type="file" name="game_images" accept="image/*" />
+            </div>
+            <% if (locals.errors && errors.game_images) { %>
+              <div class="rojopirupi">
+                <%= errors.game_images.msg %>
+              </div>
+              <% } %>
+          </div>
+
+          <div class="margin-bottom-15">
+            <label for="gender" class="margin-bottom-20">Genero*</label>
+            <div class="margin-bottom-20">
+              <% for(gender of genders) { %>
+                <div>
+                  <input class="radio-check-space" type="radio" name="gender" id="gender" value="<%=locals.old &&
+                    old.gender ? old.gender : " " %>" />
+                  <%= gender %>
+                </div>
+                <% } %>
+                  <% if (locals.errors && errors.gender) { %>
+                    <div class="rojopirupi">
+                      <%= errors.gender.msg %>
+                    </div>
+                    <% } %>
+            </div>
+          </div>
+
+          <div class="margin-bottom-15">
+            <label for="consol" class="margin-bottom-20">Consola</label>
+            <div class="margin-bottom-20">
+              <% for(consol of consols) { %>
+                <div>
+                  <input class="radio-check-space" type="radio" name="consol" id="consol" value=<%=locals.old &&
+                    old.consol===consol ? consol : " " %> />
+                  <%= consol.family %>
+                </div>
+                <% } %>
+                  <% if (locals.errors && errors.consol) { %>
+                    <div class="rojopirupi">
+                      <%= errors.consol.msg %>
+                    </div>
+                    <% } %>
+            </div>
+          </div>
+          </div>
+
+
+          <div class="buttons-send-erase">
+            <button class="buttons" type="submit">Confirmar</button>
+            <button class="buttons">Cancelar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+
+</html>

@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "name": "Final Fantasy VIII",
+        "gender": "RPG",
+        "consol": "Play Station 1",
+        "family": "playstation",
+        "image": "url",
+        "description": "description"
+    },
+    {
+        "id": 1641857194624,
+        "name": "asd",
+        "description": "asdasdasdasdasdasdasdasd",
+        "gender": " ",
+        "consol": "/",
+        "game_images": "1641857194600_game.png"
+    },
+    {
+        "id": 1641857497401,
+        "name": "asdasdasd",
+        "description": "asdasdasdasdasdasdasdasd",
+        "gender": " ",
+        "consol": "/",
+        "game_images": "1641857497390_game.png"
+    }
+]

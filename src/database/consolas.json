@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "PS1",
+        "consol_image": "ps1.png",
+        "logo": "play_station.png",
+        "family": "playstation"
+    },
+    {
+        "id": "2",
+        "name": "N64",
+        "consol_image": "N64.png",
+        "logo": "nintendo_64.png",
+        "family": "nintendo"
+    },
+    {
+        "id": "3",
+        "name": "SEGA",
+        "consol_image": "sega.png",
+        "logo": "sega.png",
+        "family": "sega"
+    },
+    {
+        "id": "4",
+        "name": "ATARI",
+        "consol_image": "Atari.png",
+        "logo": "atari.png",
+        "family": "atari"
+    },
+    {
+        "id": "5",
+        "name": "FAMILY",
+        "consol_image": "Family.png",
+        "logo": "family.png",
+        "family": "nintendo"
+    },
+    {
+        "id": "6",
+        "name": "SuperNintendo",
+        "consol_image": "SuperNintendo.png",
+        "logo": "supernintendo.png",
+        "family": "nintendo"
+    }
+]

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include("../partials/head.ejs") %>
+        <link href="/css/styles_register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+
+        <main>
+
+            <div class="container">
+                <h2 class="headlines">Actualizando</h2>
+                <div class="wrapper">
+                    <section class="user-reg">
+                        <form action="./" method="POST" class="registration" enctype="multipart/form-data">
+                            <div class="margin-vertical-20">
+                                <h3 class="subs">Actualizar datos:</h3>
+                            </div>
+
+                            <div class="margin-vertical-20">
+                                <label for="email">Correo Electrónico:</label>
+                                <p>Correo Electrónico: <%=locals.userLogged.email%>
+                                </p>
+                            </div>
+                            <div class="margin-vertical-20">
+                                <label for="user_name">Nombre de Usuario</label>
+                                <p>Nombre de Usuario: <%=locals.userLogged.user_name%>
+                                </p>
+                            </div>
+
+                            <div class="margin-vertical-20">
+                                <label for="address">Domicilio</label>
+                                <input type="text" id="address" name="address" placeholder="Ingresa tu dirección"
+                                    value="<%=locals.userLogged.address%>">
+                            </div>
+                            <div class="margin-vertical-20">
+                                <label for="user_image">Elegí tu foto de perfil</label>
+                                <input type="file" id="user_image" name="user_image" accept="image/*">
+                            </div>
+                            <div class="margin-vertical-20">
+                                <h3 class="subs">Cambiar Contraseña:</h3>
+                            </div>
+                            <div class="margin-vertical-20">
+                                <label for="old_password">Contraseña Antigua</label>
+                                <input type="password" name="old_password" id="old_password"
+                                    placeholder="Ingresa tu contraseña antigua">
+                            </div>
+                            <div class="margin-vertical-20">
+                                <label for="password">Nueva Contraseña</label>
+                                <input type="password" name="password" id="password"
+                                    placeholder="Ingresa tu nueva contraseña">
+                            </div>
+                            <div class="margin-vertical-20">
+                                <label for="confirmPassword">Repetir Contraseña</label>
+                                <input type="password" name="confirmPassword" id="confirmPassword"
+                                    placeholder="Repetí la contraseña ingresada">
+
+                            </div>
+                    </section>
+                    <section class="reg-botones">
+                        <button type="submit" class="boton">Actualizar
+                            información</button>
+
+
+
+                    </section>
+                    </form>
+                    <section class="edit_botons">
+                        <div class="margin-vertical-20 width_edit_botons">
+                            <a href="./delete"><button class="boton boton1" type="submit">Eliminar</button></a>
+                        </div>
+
+                        <div class="margin-vertical-20 width_edit_botons">
+                            <a href="/user/profile"> <button class="boton boton1 ">Cancelar</button></a>
+                        </div>
+                    </section>
+                    </section>
+
+                </div>
+            </div>
+
+
+        </main>
+
+
+        <%- include("../partials/footer.ejs") %>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: "Editando " + game.name }) %>
+</head>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+
+        <section class="centrar">
+            <h2 class="headlines">Editando Juego: -<%= game.name %>-
+            </h2>
+
+            <form action="/games/<%= consol.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="margin-bottom-15">
+                    <label for="consol-name">Nombre del Juego</label>
+                    <input class="box" type="text" name="consol-name" id="nombre-producto" value="<%= game.name %>" />
+                </div>
+
+                <div class="margin-bottom-15">
+                    <label for="consol-image">Cargar imagen</label>
+                    <div>
+                        <input class="margin-bottom-20" type="file" name="consol-image" accept=".jpg"
+                            value="<%= game.image %>" />
+                    </div>
+                </div>
+
+                <div class="margin-bottom-15">
+                    <label for="consol-logo">Cargar logo</label>
+                    <div>
+                        <input class="margin-bottom-20" type="file" name="consol-logo" accept=".jpg"
+                            value="<%= consol.logo %>" />
+                    </div>
+                </div>
+
+                <div class="buttons-send-erase">
+                    <button class="buttons" type="submit">Confirmar</button>
+                    <button class="buttons">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

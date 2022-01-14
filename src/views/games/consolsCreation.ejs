@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <%- include('../partials/head.ejs', {title: "Creando consola" }) %>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+
+    <section class="centrar">
+      <h2 class="headlines">Creando nueva consola</h2>
+      <p style="margin-bottom: 20px">(consola software)</p>
+      <div class="errores">
+
+      </div>
+      <form action="/consols" method="POST" enctype="multipart/form-data">
+
+        <div class="margin-bottom-15">
+          <label for="name">Nombre de la consola</label>
+          <input class="box" type="text" name="name" id="name" value="<%=locals.old  ?
+                    old.name : " " %>">
+          <% if (locals.errors && errors.name) { %>
+            <div class="rojopirupi">
+              <%= errors.name.msg %>
+            </div>
+            <% } %>
+        </div>
+
+
+        <div class="margin-bottom-15">
+          <label for="consol_image">Cargar imagen</label>
+          <div>
+            <input class="margin-bottom-20" type="file" name="consol_image" id="consol_image" accept="image/*">
+            <% if (locals.errors && errors.consol_image) { %>
+              <div class="rojopirupi">
+                <%= errors.consol_image.msg %>
+              </div>
+              <% } %>
+          </div>
+        </div>
+
+        <div class="margin-bottom-15">
+          <label for="logo">Cargar logo</label>
+          <div>
+            <input class="margin-bottom-20" type="file" name="logo" accept="image/*" />
+            <% if (locals.errors && errors.logo) { %>
+              <div class="rojopirupi">
+                <%= errors.logo.msg %>
+              </div>
+              <% } %>
+          </div>
+        </div>
+
+        <div class="buttons-send-erase">
+          <button class="buttons" type="submit">Confirmar</button>
+          <button class="buttons" type="reset">Borrar informacion</button>
+        </div>
+      </form>
+    </section>
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
