@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN REGISTER */
+
+.registration {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container {
+  text-align: center;
+  margin: 50px auto;
+  width: 90%;
+  border: black 1px solid;
+  border-radius: 5px;
+}
+
+.container > h2 {
+  background-color: rgb(196, 194, 194);
+  padding: 15px 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.wrapper {
+  padding-top: 10px;
+  
+}
+
+.wrapper > .user-reg > div {
+  margin-bottom: 10px;
+}
+
+.wrapper > .user-reg > div > label {
+  display: none;
+}
+
+.wrapper > .user-reg > div > input {
+  width: 90%;
+  text-align: center;
+  padding: 3px;
+  border-radius: 8px;
+  height: 30px;
+}
+
+.reg-botones {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.reg-botones button {
+  margin-top: 10px;
+}
+
+.reg-bot {
+  padding: 2px;
+  transition: all 1s;
+  border-radius: 2px;
+}
+
+.reg-bot:hover {
+  background-color: #a1cbc5;
+}
+
+.cancel-bot {
+  padding: 2px;
+  transition: all 1s;
+  border-radius: 2px;
+}
+
+.cancel-bot:hover {
+  background-color: #a31915;
+}
+
+.margin_auto {
+  margin: auto
+}
+
+.edit_botons {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: auto;
+}
+
+.width_edit_botons {
+  width: 45%
+}
+
+.boton1 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+.container {
+  width: 65%;
+}
+}

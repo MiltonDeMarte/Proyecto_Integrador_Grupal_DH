@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** BODY **/
+
+/*HEADER*/
+header {
+  background-color: #000000;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.w-logo {
+  width: 40%;
+}
+.w-100 {
+  width: 100%;
+}
+.logo {
+  margin: auto;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.w-burger-menu {
+  width: 30%;
+}
+.burger-menu {
+  width: 60%;
+  height: 40px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 2.5px;
+  font-size: 1.1em;
+  margin-left: 20%;
+}
+
+.user-menu {
+  display: none;
+}
+.w-navbar {
+  width: 80%;
+}
+.navbar1 ul {
+  justify-content: space-around;
+  margin: 50px;
+  list-style-type: none;
+  display: flex;
+}
+.navbar1 ul li > a {
+  color: white;
+  text-decoration: none;
+  margin: auto 15px;
+}
+.navbar1 ul li > a:hover {
+  color: #cdb48c;
+}
+
+.w-user-ux {
+  width: 30%;
+}
+.user-ux {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+.user-ux i {
+  color: white;
+  font-size: 28px;
+  margin: 10px;
+  margin-left: 20px;
+}
+.user-ux i:hover {
+  color: #cdb48c;
+}
+/*HEADER*/
+
+/*MAIN*/
+.margin-sections {
+  margin: 40px 20px;
+}
+.margin-10 {
+  margin: 10px;
+}
+.margin-vertical-20 {
+  margin: 20px 0;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.trailers-box {
+  display: flex;
+  width: 100%;
+}
+.trailers {
+  width: 100%;
+  margin: auto;
+}
+.boton-trailers {
+  background-color: none;
+  border-radius: 100%;
+}
+.boton-sin-fondo {
+  border: none;
+  background-color: none;
+}
+.boton {
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  margin: auto;
+}
+.boton:hover {
+  background-color: #93b6e2;
+}
+.boton a {
+  text-decoration: none;
+  color: white;
+}
+.boton-cta {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin: 20px 0;
+}
+.section-logos-consolas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #dddddd;
+  padding: 20px 0 0 0;
+}
+.wrapper-logos-consolas {
+  width: 30%;
+  margin: 10px 20px;
+}
+.section-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contenedor-producto {
+  width: 80%;
+  margin: 20px;
+}
+.contenedor-testimonial-section {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagen-testimonial {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.contenedor-imagen-testimonial {
+  text-align: center;
+  margin: auto;
+  font-size: 5em;
+  width: 80%;
+}
+.texto-testimonial {
+  text-align: center;
+  width: 100%;
+  padding: 0 40px;
+}
+
+/*MAIN*/
+
+/*FOOTER*/
+
+/* CORRECCION BOOTSTRAP*/
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ol,
+ul {
+  padding-left: 0;
+}
+/* CORRECCION BOOTSTRAP*/
+
+footer {
+  background-color: #c0c0c0;
+}
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+.footer-divbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 14px;
+}
+.footer-divbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+.footer-divbar ul li {
+  list-style: none;
+}
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+  padding: 20px 50px;
+}
+.social-media i {
+  font-size: 2em;
+}
+
+.contenedor-footer-1 {
+  width: 18%;
+  display: none;
+}
+.contenedor-footer-2 {
+  width: 18%;
+  display: none;
+}
+.contenedor-footer-3 {
+  width: 18%;
+  display: none;
+}
+.contenedor-footer-4 {
+  width: 100%;
+  text-align: center;
+}
+
+.fa-whatsapp-square {
+  color: #3ac14d;
+}
+.fa-whatsapp-square:hover {
+  color: #2d9a3c;
+}
+
+.fa-facebook-square {
+  color: #4167b2;
+}
+.fa-facebook-square:hover {
+  color: #365491;
+}
+
+.fa-instagram-square {
+  color: #d6005c;
+}
+.fa-instagram-square:hover {
+  color: #b80351;
+}
+
+.fa-twitter-square {
+  color: #039ff5;
+}
+.fa-twitter-square:hover {
+  color: #0488d0;
+}
+
+/*Errors Styles*/
+
+.errores {
+  color: red;
+  background-color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+@media (min-width: 480px) {
+  /*HEADER*/
+  .w-logo {
+    width: 20%;
+  }
+  .w-burger-menu {
+    width: 35%;
+  }
+  .w-user-ux {
+    width: 35%;
+  }
+  .burger-menu {
+    font-size: 1.6em;
+  }
+  /*HEADER*/
+
+  .trailers {
+    width: 60%;
+  }
+  .boton-trailers {
+    background-color: #000000;
+    border-radius: 100%;
+  }
+  .boton-box-trailers {
+    display: block;
+    width: 10%;
+    margin: auto;
+    text-align: center;
+  }
+  .wrapper-logos-consolas {
+    width: 10%;
+    margin: 15px 0;
+  }
+  .section-logos-consolas {
+    padding: 0;
+  }
+  .contenedor-producto {
+    width: 30%;
+    margin: 0;
+  }
+  .contenedor-testimonial-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imagen-testimonial {
+    width: 150px;
+    height: 150px;
+    border: black 1px solid;
+    border-radius: 100%;
+    margin: auto;
+  }
+  .contenedor-imagen-testimonial {
+    text-align: center;
+    margin: auto;
+    font-size: 5em;
+    width: 40%;
+  }
+  .texto-testimonial {
+    text-align: left;
+    width: 60%;
+    padding: 0;
+  }
+  /*FOOTER*/
+  .social-media {
+    width: 25%;
+    padding: 0;
+  }
+  .footer-navbar {
+    width: 75%;
+    padding: 0 30px;
+  }
+  .contenedor-footer-1 {
+    width: 30%;
+    display: block;
+  }
+  .contenedor-footer-4 {
+    width: 45%;
+    text-align: left;
+  }
+}
+
+/*1200px*/
+@media (min-width: 1200px) {
+  /*HEADER*/
+  .user-menu {
+    display: block;
+  }
+  .w-burger-menu {
+    display: none;
+  }
+  .w-navbar {
+    width: 80%;
+  }
+  .w-logo {
+    width: 10%;
+  }
+  .logo {
+    margin-left: 25px;
+  }
+  .w-user-ux {
+    width: 10%;
+  }
+  .user-ux {
+    margin-right: 25px;
+    padding-left: 0;
+  }
+  .user-ux i {
+    margin: 20px;
+  }
+  /*HEADER*/
+
+  .boton {
+    width: 30%;
+    font-size: 18px;
+  }
+  .section-logos-consolas {
+    padding: 0;
+  }
+  .contenedor-testimonial-section {
+    width: 70%;
+  }
+
+  /*FOOTER*/
+  .footer-section {
+    padding: 50px 20px;
+  }
+  .social-media {
+    width: 20%;
+  }
+  .footer-navbar {
+    width: 80%;
+  }
+  .contenedor-footer-1 {
+    width: 15%;
+  }
+  .contenedor-footer-2 {
+    width: 20%;
+    display: block;
+  }
+  .contenedor-footer-3 {
+    width: 15%;
+    display: block;
+  }
+  .contenedor-footer-4 {
+    width: 30%;
+  }
+}

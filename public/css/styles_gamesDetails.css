@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*MAIN GAMES DETAILS*/
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+
+.left {
+  text-align: center;
+}
+
+.soft-title {
+  background-color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.left-container {
+  padding: 15px;
+  text-align: center;
+  border: 2px;
+  border-color: #000000;
+  border-style: solid;
+  background-color: #c0c0c0;
+}
+
+.soft-descr {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.opciones-container {
+  border: 2px;
+  border-radius: 8px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 15px;
+}
+
+.left-container > div > h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.opciones-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+#opciones-bot {
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#opciones-bot:hover {
+  background-color: #706f6f;
+}
+
+.generos-bot:active .consolas-opciones {
+  display: none;
+}
+
+.generos-bot:active .generos-opciones {
+  display: block;
+}
+
+.consolas-bot:active .generos-opciones {
+  display: none;
+}
+
+.consolas-bot:active .consolas-opciones {
+  display: block;
+}
+
+.consolas-opciones > button {
+  margin: 4px;
+  padding: 2px;
+  width: 30%;
+  height: 30px;
+}
+
+.consolas-opciones button img {
+  width: 100%;
+}
+
+.img-div {
+  position: relative;
+  bottom: 25px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-right: 24px;
+  padding-left: 21px;
+  padding-top: 7px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  font-family: "Poppins";
+  display: none;
+  transition: all 1s;
+}
+
+.consolas-opciones > button:hover .img-div {
+  display: inline;
+}
+
+.generos-opciones {
+  display: none;
+  transition: all 1s;
+}
+
+.generos-opciones > button {
+  margin: 4px;
+  padding: 2px;
+}
+
+.right {
+  text-align: center;
+}
+
+.barra {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.barra-buscadora {
+  width: 90%;
+  text-align: center;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.img-container {
+  margin-top: 10px;
+  margin: auto;
+  width: 90%;
+}
+
+.juegos-container > a {
+  padding: 5px;
+}
+
+.div-but {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.consolas {
+  padding: 5px;
+}
+
+.create {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*QUERIES*/
+
+@media (min-width: 360px) {
+  .barra {
+    margin-top: 20px;
+  }
+
+  .boton {
+    width: 35%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 60%;
+  }
+
+  .boton {
+    width: 35%;
+    font-size: 16px;
+  }
+
+  #consol-bot {
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 40%;
+  }
+
+  .boton {
+    width: 35%;
+    font-size: 16px;
+  }
+}

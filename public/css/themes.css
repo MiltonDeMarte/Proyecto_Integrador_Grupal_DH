@@ -1,0 +1,51 @@
+/* COLORES PIRUPI GAMES */
+
+.rosapirupi {
+  color: #cd78c2;
+}
+
+.verdepirupi {
+  color: #a1cbc5;
+}
+
+.celestepirupi {
+  color: #93b6e2;
+}
+
+.rojopirupi {
+  color: #a31915;
+}
+
+.negropirupi {
+  color: #000000;
+}
+
+.arenapirupi {
+  color: #cdb48c;
+}
+
+.grispirupi {
+  color: #706f6f;
+}
+
+/* TIPOGRAFIA PIRUPI GAMES */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.cita {
+  font-style: italic;
+}
+
+.subs {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.headlines {
+  font-size: 24px;
+  font-weight: 600;
+}
